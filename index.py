@@ -7,8 +7,6 @@ app.secret_key = 'patos'
     # Creamos la conexión con la base de datos:
 mysql = MySQL()
 app.config['MYSQL_DATABASE_HOST']='localhost'
-from flask import Flask, render_template
-from flask_mysqldb import MySQL
 
 app = Flask(__name__)
 
@@ -19,6 +17,8 @@ app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'sistema'
 # Inicializar la extensión MySQL
 mysql = MySQL(app)
+
+
 
 # RUTAS BASICAS
 @app.route('/')
@@ -49,6 +49,9 @@ def recuperarPassword():
 @app.route('/torneos')
 def torneos():     
     return render_template('torneos.html')
+
+
+
 
 #MANEJO DE SQL
 

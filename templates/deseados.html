@@ -49,21 +49,22 @@
             <tbody>
                 {% for deseo in deseos %}
                 <tr>
-                    <td>{{ deseo[2] }}</td>
-                    <td><img src="{{ deseo[1] }}" alt="Foto de {{ deseo[2] }}"></td>
+                    <td>{{ deseo[3] }}</td>
+                    <td><img src="{{ deseo[2] }}" alt="Foto de {{ deseo[2] }}"></td>
                     <td>
                         <div>
-                            <button onclick="actualizarCantidad('{{ deseo[0] }}', -1)">-</button>
-                            <span>{{ deseo[3] }}</span>
-                            <button onclick="actualizarCantidad('{{ deseo[0] }}', 1)">+</button>
+                            <button onclick="actualizarCantidad('{{ deseo[1] }}', -1)">-</button>
+                            <span>{{ deseo[4] }}</span>
+                            <button onclick="actualizarCantidad('{{ deseo[1] }}', 1)">+</button>
                         </div>
                     </td>
-                    <td><button onclick="deletear('{{ deseo[0] }}')">Eliminar</button></td>
+                    <td><button onclick="deletear('{{ deseo[1] }}')">Eliminar</button></td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
     </main>
+
     <footer>
         <div class="barra-suscribir">
             <h1>Suscríbete</h1>

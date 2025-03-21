@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request, jsonify
+from flask import Flask, render_template, request, jsonify
 from flask_mysqldb import MySQL
 
 app = Flask(__name__)
@@ -101,6 +101,9 @@ def deseados():
 @app.route('/actualizarCantidad', methods=['POST'])
 def actualizarCantidad():
     data = request.get_json()
+
+    print(f"Datos recibidos: {data}")
+    
     gameId = data.get('gameId')
     change = data.get('change')
     
